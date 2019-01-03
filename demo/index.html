@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        .block{
+            height: 50px;
+            background: green;
+        }
+        .inline{
+            background: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <vue-click-away-listener @on-click-away="onAway('block')" @on-click="onClick('block')">
+        <div class="block">block away: {{ blockAway }}</div>
+    </vue-click-away-listener>
+    <vue-click-away-listener tag="span" @on-click-away="onAway('inline')" @on-click="onClick('inline')">
+        <span class="inline">inline away: {{ inlineAway }}</span>
+    </vue-click-away-listener>
+</div>
+</body>
+</html>
